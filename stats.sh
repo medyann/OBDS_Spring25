@@ -21,7 +21,7 @@
 #SBATCH --output=%j_%x.out
 #SBATCH --error=%j_%x.err
 
-# samtools sort -o m39sample.sam > sorted.bam
+# samtools sort -@ 8 -o sorted.bam aln-pe.sam
 # samtools idxstats /project/lina4613/linux/3_analysis/mapping/sorted.bam > sorted.idxstats
 # samtools flagstat /project/lina4613/linux/3_analysis/mapping/sorted.bam > sorted.flagstat
 
